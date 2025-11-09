@@ -1,0 +1,24 @@
+{
+  "name": "vocalario-marketing-site",
+  "version": "1.0.0",
+  "description": "Marketing website for Vocalario Chrome Extension",
+  "type": "module",
+  "scripts": {
+    "build": "npm run prebuild && node build.js",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "vocalario",
+    "chrome-extension",
+    "vocabulary",
+    "learning"
+  ],
+  "author": "Vocalario",
+  "license": "MIT",
+  "devDependencies": {
+    "html-minifier-terser": "7.2.0",
+    "clean-css": "5.3.3",
+    "terser": "5.36.0"
+  }
+}
