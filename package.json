@@ -19,8 +19,10 @@
   "author": "Vocalario",
   "license": "MIT",
   "devDependencies": {
-    "html-minifier-terser": "7.2.0",
+    "@fullhuman/postcss-purgecss": "7.0.2",
     "clean-css": "5.3.3",
+    "html-minifier-terser": "7.2.0",
+    "sharp": "0.34.5",
     "terser": "5.36.0"
   }
 }
