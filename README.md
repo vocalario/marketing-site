@@ -20,6 +20,28 @@ src/
     └── main.js         # JavaScript enhancements
 ```
 
+### Local Testing
+
+Start a local development server to test the built files:
+
+```bash
+# Build and start server
+npm run build
+npm run dev
+
+# Or combine both
+npm run build && npm run dev
+```
+
+Server will start at `http://localhost:3000` serving the `dist/` folder.
+
+**Dev server features:**
+- Serves files from `dist/` directory
+- Automatic MIME type detection
+- Clean URLs (e.g., `/privacy` → `/privacy.html`)
+- Directory traversal protection
+- Custom port: `PORT=3001 npm run dev`
+
 ### Build for Production
 
 Install dependencies and build:

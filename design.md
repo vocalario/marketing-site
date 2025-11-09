@@ -1175,7 +1175,7 @@ If you prefer even simpler, just use styled text:
 
 ```html
 <!-- Simple obfuscation to reduce spam -->
-<a href="mailto:admin&#64;vocalario&#46;com">
+<a href="mailto:admin@vocalario.com">
   admin&#64;vocalario&#46;com
 </a>
 ```

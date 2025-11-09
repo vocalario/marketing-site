@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npm run prebuild && node build.js",
     "clean": "rm -rf dist",
-    "prebuild": "npm run clean"
+    "prebuild": "npm run clean",
+    "dev": "node server.js",
+    "start": "npm run build && npm run dev"
   },
   "keywords": [
     "vocalario",
