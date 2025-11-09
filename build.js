@@ -259,10 +259,17 @@ async function copyAsIs(inputPath, outputPath) {
 }
 
 /**
- * Process root-level files (sitemap.xml, robots.txt)
+ * Process root-level files (sitemap.xml, robots.txt, favicon files)
  */
 async function processRootFiles() {
-  const rootFiles = ['sitemap.xml', 'robots.txt'];
+  const rootFiles = [
+    'sitemap.xml',
+    'robots.txt',
+    'favicon.svg',
+    'favicon.ico',
+    'apple-touch-icon.png',
+    'icon-512.png'
+  ];
   
   for (const file of rootFiles) {
     const inputPath = join(ROOT_DIR, file);

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Vocalario Favicon - Simple "V" mark -->
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#00509d"/>
+  
+  <!-- "V" lettermark in white -->
+  <path d="M16 24L8 8h4l4 10l4-10h4L16 24z" fill="white"/>
+  
+  <!-- Small accent dot (orange) -->
+  <circle cx="24" cy="10" r="2" fill="#ff9013"/>
+</svg>

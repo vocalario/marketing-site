@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "npm run prebuild && node build.js",
+    "icons": "node generate-icons.js",
     "clean": "rm -rf dist",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run icons",
     "dev": "node server.js",
     "start": "npm run dev"
   },
@@ -23,6 +24,7 @@
     "clean-css": "5.3.3",
     "html-minifier-terser": "7.2.0",
     "sharp": "0.34.5",
-    "terser": "5.36.0"
+    "terser": "5.36.0",
+    "to-ico": "1.1.5"
   }
 }
