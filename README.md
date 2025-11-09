@@ -37,10 +37,17 @@ Server will start at `http://localhost:3000` serving the `dist/` folder.
 
 **Dev server features:**
 - Serves files from `dist/` directory
+- **Hot reload**: Automatically refreshes browser when files change
 - Automatic MIME type detection
 - Clean URLs (e.g., `/privacy` → `/privacy.html`)
 - Directory traversal protection
 - Custom port: `PORT=3001 npm run dev`
+
+**Development workflow:**
+1. Open `http://localhost:3000` in browser
+2. Edit files in `src/`
+3. Run `npm run build` in another terminal
+4. Browser automatically reloads with changes
 
 ### Build for Production
 

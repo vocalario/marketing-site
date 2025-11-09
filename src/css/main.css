@@ -14,24 +14,25 @@
 }
 
 .section {
-  padding: var(--spacing-3xl) var(--spacing-md);
+  padding: clamp(64px, 12vh, 128px) var(--spacing-md);
 }
 
 .section-title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  line-height: var(--leading-tight);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
   text-align: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   color: var(--color-text);
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
-  font-size: var(--text-lg);
-  line-height: var(--leading-relaxed);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
   text-align: center;
   color: var(--color-text-secondary);
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto var(--spacing-xl);
 }
 
@@ -64,7 +65,7 @@
 }
 
 /* ============================================
-   BUTTONS
+   BUTTONS - Clean design matching extension
    ============================================ */
 
 .btn {
@@ -72,27 +73,30 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
-  padding: var(--button-size-md-padding);
-  height: var(--button-size-md-height);
+  padding: 12px 24px;
+  height: auto;
   border-radius: var(--radius-md);
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: all var(--transition-base);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
   font-family: var(--font-sans);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: white;
+  background: var(--color-background-alt);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  background: var(--color-surface);
 }
 
 .btn-primary:active {
@@ -108,6 +112,7 @@
 
 .btn-secondary:hover {
   background-color: var(--color-primary-light);
+  transform: translateY(-1px);
 }
 
 .btn svg {
@@ -116,38 +121,44 @@
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION - Blue gradient background matching extension
    ============================================ */
 
 .section-hero {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-background) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   text-align: center;
-  padding: var(--spacing-3xl) var(--spacing-md);
+  padding: clamp(80px, 15vh, 160px) var(--spacing-md);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-headline {
-  font-size: 2.5rem;
-  font-weight: var(--font-bold);
-  line-height: var(--leading-tight);
-  color: var(--color-text);
-  letter-spacing: var(--letter-tight);
-  margin-bottom: var(--spacing-md);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-background-alt);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
 }
 
 .hero-subheadline {
-  font-size: var(--text-xl);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
   max-width: 700px;
   margin: 0 auto var(--spacing-xl);
+  position: relative;
+  font-weight: 400;
 }
 
 .hero-cta {
   margin-top: var(--spacing-xl);
+  position: relative;
 }
 
 /* ============================================
-   FEATURES SECTION
+   FEATURES SECTION - Clean card design matching extension
    ============================================ */
 
 .features-grid {
@@ -177,15 +188,16 @@
 }
 
 .feature-card {
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  background-color: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-background-alt);
   border: 1px solid var(--color-border);
-  transition: all var(--transition-base);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
 }
 
 .feature-card:hover {
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary-light);
   transform: translateY(-4px);
 }
@@ -196,33 +208,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary-light);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .feature-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--color-primary);
+  color: var(--color-background-alt);
 }
 
 .feature-title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
+  font-size: 1.125rem;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
 }
 
 .feature-description {
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
+  font-size: 0.938rem;
+  line-height: 1.6;
   color: var(--color-text-secondary);
   margin: 0;
 }
 
 /* ============================================
-   HOW IT WORKS SECTION
+   HOW IT WORKS SECTION - Clean step cards matching extension
    ============================================ */
 
 .section-how {
@@ -231,9 +244,12 @@
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .step-card {
@@ -242,6 +258,17 @@
   align-items: center;
   text-align: center;
   gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  background: var(--color-background-alt);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .step-number {
@@ -250,29 +277,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary);
-  color: white;
-  font-size: var(--text-2xl);
-  font-weight: var(--font-bold);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  color: var(--color-background-alt);
+  font-size: 1.5rem;
+  font-weight: 700;
   border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
 }
 
 .step-title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--color-text);
   margin: 0;
 }
 
 .step-description {
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: var(--color-text-secondary);
   margin: 0;
 }
 
 /* ============================================
-   PRIVACY SECTION
+   PRIVACY SECTION - Clean list design matching extension
    ============================================ */
 
 .section-privacy {
@@ -280,7 +308,7 @@
 }
 
 .privacy-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -288,6 +316,8 @@
   list-style: none;
   padding: 0;
   margin: var(--spacing-xl) 0;
+  display: grid;
+  gap: var(--spacing-md);
 }
 
 .privacy-list li {
@@ -295,16 +325,22 @@
   align-items: flex-start;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
-  background-color: var(--color-surface);
+  background: var(--color-surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.privacy-list li:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-light);
 }
 
 .privacy-list li svg {
-  width: 24px;
-  height: 24px;
-  color: var(--color-accent);
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -315,56 +351,68 @@
 
 .privacy-list li strong {
   display: block;
-  font-weight: var(--font-semibold);
+  font-weight: 600;
   color: var(--color-text);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 4px;
+  font-size: 1rem;
 }
 
 .privacy-list li p {
   margin: 0;
   color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
 /* ============================================
-   FINAL CTA SECTION
+   FINAL CTA SECTION - Clean gradient design matching extension
    ============================================ */
 
 .section-cta {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: white;
+  color: var(--color-background-alt);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .section-cta .section-title {
-  color: white;
+  color: var(--color-background-alt);
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .section-cta .section-subtitle {
   color: rgba(255, 255, 255, 0.9);
+  position: relative;
 }
 
 .btn-cta {
-  background-color: white;
+  background-color: var(--color-background-alt);
   color: var(--color-primary);
-  font-weight: var(--font-bold);
+  font-weight: 600;
+  position: relative;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-cta:hover {
   background-color: var(--color-surface);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - Modern dark footer
    ============================================ */
 
 .footer {
-  background-color: var(--color-text);
+  background: linear-gradient(135deg, var(--color-text) 0%, #1a1a1a 100%);
   color: var(--color-text-muted);
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-2xl) var(--spacing-md);
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -376,8 +424,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
   list-style: none;
   padding: 0;
 }
@@ -385,15 +433,16 @@
 .footer-links a {
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: color var(--transition-base);
+  transition: color 0.2s ease;
+  font-size: 0.938rem;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: var(--color-background-alt);
 }
 
 .footer-copyright {
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -404,6 +453,7 @@
 
 .footer-email:hover {
   text-decoration: underline;
+  color: var(--color-accent-hover);
 }
 
 /* ============================================
@@ -505,7 +555,7 @@ button:focus {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - Modern breakpoints
    ============================================ */
 
 /* Tablet */
@@ -528,13 +578,13 @@ button:focus {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-headline {
-    font-size: 2rem;
-  }
-
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -555,35 +605,35 @@ button:focus {
   }
 
   .section {
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: clamp(48px, 10vh, 96px) var(--spacing-md);
   }
 
   .footer-links {
     flex-direction: column;
     gap: var(--spacing-md);
   }
+
+  .privacy-list li {
+    padding: var(--spacing-md);
+  }
+
+  .step-card {
+    padding: var(--spacing-md);
+  }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .hero-headline {
-    font-size: 1.75rem;
-  }
-
-  .hero-subheadline {
-    font-size: var(--text-lg);
-  }
-
-  .section-title {
-    font-size: var(--text-2xl);
-  }
-
-  .section-subtitle {
-    font-size: var(--text-base);
+  .section {
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .feature-card {
+    padding: var(--spacing-lg);
   }
 }

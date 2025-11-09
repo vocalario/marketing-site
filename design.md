@@ -786,7 +786,7 @@ All color combinations must meet WCAG AA standards:
   <!-- Primary Meta Tags -->
   <title>Vocalario - Learn Vocabulary from Websites You Visit</title>
   <meta name="title" content="Vocalario - Learn Vocabulary from Websites You Visit">
-  <meta name="description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for multiple AI providers with local-first storage. No account required.">
+  <meta name="description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for Multiple AI providers with Local-first storage. No account required.">
   <meta name="keywords" content="vocabulary learning, chrome extension, language learning, AI vocabulary, privacy-focused">
   <meta name="author" content="Vocalario">
   
@@ -797,14 +797,14 @@ All color combinations must meet WCAG AA standards:
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vocalario.com/">
   <meta property="og:title" content="Vocalario - Learn Vocabulary from Websites You Visit">
-  <meta property="og:description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for multiple AI providers with local-first storage.">
+  <meta property="og:description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for Multiple AI providers with Local-first storage.">
   <meta property="og:image" content="https://vocalario.com/images/og-image.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://vocalario.com/">
   <meta property="twitter:title" content="Vocalario - Learn Vocabulary from Websites You Visit">
-  <meta property="twitter:description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for multiple AI providers with local-first storage.">
+  <meta property="twitter:description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for Multiple AI providers with Local-first storage.">
   <meta property="twitter:image" content="https://vocalario.com/images/og-image.png">
   
   <!-- Favicon -->
