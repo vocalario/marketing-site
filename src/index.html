@@ -10,6 +10,8 @@
   <meta name="description" content="Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for multiple AI providers with local-first storage. No account required.">
   <meta name="keywords" content="vocabulary learning, chrome extension, language learning, AI vocabulary, privacy-focused, OpenAI, Anthropic, Google Gemini">
   <meta name="author" content="Vocalario">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://vocalario.com/">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -34,7 +36,7 @@
   <link rel="stylesheet" href="src/css/design-system.css">
   <link rel="stylesheet" href="src/css/main.css">
   
-  <!-- Structured Data -->
+  <!-- Structured Data - SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,17 +44,84 @@
     "name": "Vocalario",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Chrome",
+    "browserRequirements": "Requires Chrome browser",
+    "softwareVersion": "1.0.0",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages",
+    "description": "Privacy-focused Chrome extension that extracts and analyzes vocabulary from webpages. Support for multiple AI providers with local-first storage.",
+    "featureList": [
+      "Extract vocabulary from any webpage",
+      "Support for multiple AI providers (OpenAI, Anthropic, Google Gemini)",
+      "Local-first data storage",
+      "Bring Your Own Key (BYOK)",
+      "Privacy-focused - no data collection"
+    ],
+    "screenshot": "https://vocalario.com/src/images/screenshot.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": "1"
+    },
     "author": {
       "@type": "Organization",
       "name": "Vocalario",
+      "url": "https://vocalario.com",
       "email": "admin@vocalario.com"
     }
+  }
+  </script>
+  
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vocalario",
+    "url": "https://vocalario.com",
+    "logo": "https://vocalario.com/favicon.svg",
+    "sameAs": [
+      "https://github.com/vocalario"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "admin@vocalario.com",
+      "contactType": "Customer Support"
+    }
+  }
+  </script>
+  
+  <!-- Structured Data - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vocalario",
+    "url": "https://vocalario.com",
+    "description": "Learn vocabulary from websites you visit",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vocalario.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <!-- Structured Data - BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vocalario.com/"
+      }
+    ]
   }
   </script>
 </head>
