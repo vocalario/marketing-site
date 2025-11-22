@@ -9,7 +9,13 @@ import toIco from 'to-ico';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const FAVICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#00509d"/>
+  <defs>
+    <linearGradient id="favicon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00509d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00296b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="url(#favicon-bg)"/>
   <path d="M16 24L8 8h4l4 10l4-10h4L16 24z" fill="white"/>
   <circle cx="24" cy="10" r="2" fill="#ff9013"/>
 </svg>`;
@@ -34,6 +40,11 @@ async function generateFavicons() {
   console.log('🎨 Generating favicon and icon assets...\n');
 
   try {
+    // Generate favicon.svg first
+    console.log('Generating favicon.svg...');
+    await writeFile(join(__dirname, 'favicon.svg'), FAVICON_SVG);
+    console.log('  ✓ Saved favicon.svg');
+
     // Generate PNG versions at different sizes
     const sizes = [16, 32, 180, 512];
     const pngBuffers = [];
@@ -75,12 +86,11 @@ async function generateFavicons() {
 
     console.log('\n✅ All assets generated successfully!');
     console.log('\n📋 Generated files:');
-    console.log('   - favicon.svg (already exists)');
+    console.log('   - favicon.svg');
     console.log('   - favicon.ico (16x16, 32x32)');
     console.log('   - apple-touch-icon.png (180x180)');
     console.log('   - icon-512.png (512x512)');
     console.log('   - src/images/og-image.png (1200x630)');
-    console.log('   - src/images/logo.svg (already exists)');
 
   } catch (error) {
     console.error('\n❌ Error generating assets:', error);
