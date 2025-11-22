@@ -102,7 +102,7 @@ THE SYSTEM SHALL display 5 feature cards with:
 
 Features to display:
 1. Extract and analyze vocabulary from any webpage
-2. Support for multiple AI providers (OpenAI, Anthropic, Google Gemini)
+2. Support for Multiple AI providers (OpenAI, Anthropic, Google Gemini)
 3. Local-first storage (no account required)
 4. BYOK (Bring Your Own Key) approach
 5. Privacy-focused design
